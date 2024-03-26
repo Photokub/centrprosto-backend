@@ -1,5 +1,6 @@
 const allowedCors = [
     'http://localhost:3000',
+    'https://photokub.github.io/zalivam-net'
 ];
 
 const corsOptions = {
