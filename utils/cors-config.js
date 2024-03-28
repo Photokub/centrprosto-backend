@@ -1,6 +1,10 @@
 const allowedCors = [
     'http://localhost:3000',
-    'https://photokub.github.io/zalivam-net'
+    'https://photokub.github.io/zalivam-net',
+    'http://51.250.18.36',
+    'https://51.250.18.36',
+    'http://centrprosto.ru',
+    'https://centrprosto.ru'
 ];
 
 const corsOptions = {
