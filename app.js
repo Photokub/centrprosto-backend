@@ -19,9 +19,9 @@ app.listen(PORT, () => {
 
 
 
+app.use(requestLogger);
 app.use(express.json())
 app.use(cors(corsOptions));
 app.use(bodyParser.json())
-app.use(requestLogger);
 app.use(router)
 app.use(errorLogger);
