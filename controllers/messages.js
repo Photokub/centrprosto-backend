@@ -11,7 +11,7 @@ const postMessage = async (req, res, next) => {
 }
 
 const SENDER_EMAIL = 'photokub@mail.ru'
-const RECIPIENT_EMAIL = "photokub@yandex.ru"
+const RECIPIENT_MAILLIST = ["photokub@yandex.ru","centrprosto.ru@yandex.ru"]
 
 transporter = nodemailer.createTransport({
     host: "smtp.mail.ru",
@@ -27,7 +27,7 @@ const sendMessage = async (req, res, next) => {
     try {
         const message = await ({
             from: SENDER_EMAIL,
-            to: RECIPIENT_EMAIL,
+            to: RECIPIENT_MAILLIST,
             subject: `Сообщение формы ОС | Отправитель: ${req.body.name} | ${req.body.email}`,
             text: `${req.body.message}`
         });
@@ -41,7 +41,7 @@ const sendCallBackMessage = async (req, res, next) => {
     try {
         const message = await ({
             from: SENDER_EMAIL,
-            to: RECIPIENT_EMAIL,
+            to: RECIPIENT_MAILLIST,
             subject: `Обратный звонок для ${req.body.name}.`,
             text: `Контактное лицо: ${req.body.name}. Контактный телефон: ${req.body.phone}`
         });
