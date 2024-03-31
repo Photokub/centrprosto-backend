@@ -1,14 +1,4 @@
-const Message = require('../models/message')
 const nodemailer = require("nodemailer");
-
-const postMessage = async (req, res, next) => {
-    try {
-        const message = await Message.create({ ...req.body });
-        return res.status(201).send(message);
-    } catch (err) {
-        return next(err)
-    }
-}
 
 const SENDER_EMAIL = 'centrprosto.ru@yandex.ru'
 const RECIPIENT_MAILLIST = ["photokub@yandex.ru","centrprosto.ru@yandex.ru"]
