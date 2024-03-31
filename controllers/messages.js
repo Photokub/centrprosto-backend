@@ -10,16 +10,16 @@ const postMessage = async (req, res, next) => {
     }
 }
 
-const SENDER_EMAIL = 'photokub@mail.ru'
+const SENDER_EMAIL = 'centrprosto.ru@yandex.ru'
 const RECIPIENT_MAILLIST = ["photokub@yandex.ru","centrprosto.ru@yandex.ru"]
 
 transporter = nodemailer.createTransport({
-    host: "smtp.mail.ru",
+    host: "smtp.yandex.ru",
     port: 465,
     secure: true,
     auth: {
         user: SENDER_EMAIL,
-        pass: 'MPdHrmbuJspXvTwAEC1T',
+        pass: 'pgejbalxfncsknml',
     },
 });
 
