@@ -1,8 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const SENDER_EMAIL = 'centrprosto.ru@yandex.ru'
-const RECIPIENT_MAILLIST = ["photokub@yandex.ru", "info@centrprosto.ru"]
-
+const RECIPIENT_MAILLIST = "info@centrprosto.ru"
 transporter = nodemailer.createTransport({
     host: "smtp.yandex.ru",
     port: 465,
